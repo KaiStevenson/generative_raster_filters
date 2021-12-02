@@ -1,0 +1,69 @@
+﻿<Window x:Class="generative_raster_filters.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:generative_raster_filters"
+        mc:Ignorable="d"
+        SizeToContent="WidthAndHeight"
+        ResizeMode="CanMinimize"
+        Title="Generative Raster Filters" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="FileSelect" Content="Select Input File" Click="FileSelect_Click"  Width="100" Height="30" Grid.Column="0" Margin="6,6,3,3"/>
+            <Button x:Name="DirectorySelect" Content="Select Output Directory" Click="DirectorySelect_Click"  Width="150" Height="30" Grid.Column="1" Margin="3,6,6,3"
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="FileName" Content="No image loaded" VerticalContentAlignment="Center" Width="Auto" Height="30" Grid.Column="0" Margin="6,3,3,3"/>
+            <Label x:Name="DirectoryName" Content="No directory selected" VerticalContentAlignment="Center" Width="Auto" Height="30" Grid.Column="1" Margin="3,3,3,3"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="FileInfo" Content="Image info unavailable" VerticalContentAlignment="Center" Width="350" Height="30" Grid.Column="0" Margin="6,3,6,3"/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <ComboBox x:Name="FilterSelect" SelectionChanged="FilterSelect_SelectionChanged" VerticalContentAlignment="Center" Width="100" Height="30" Margin="6,3,3,3">
+                <ComboBoxItem Name="Triangles" Content="Triangles" />
+                <ComboBoxItem Name="CA" Content="Chromatic Aberration"/>
+            </ComboBox>
+            <TextBox x:Name="Factor1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="50" Height="30" Grid.Column="1" Margin="3,3,3,3"/>
+            <TextBox x:Name="Factor2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="50" Height="30" Grid.Column="2" Margin="3,3,3,3"/>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="FilterDescription" Content="No filter selected" Width="350" Height="60" Grid.Column="0" Margin="6,3,6,3"/>
+        </Grid>
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ProcessImage" Content="Process Image" Click="ProcessImage_Click"  Width="200" Height="30" Grid.Column="0" Margin="6,3,3,6"/>
+        </Grid>
+    </Grid>
+</Window>
