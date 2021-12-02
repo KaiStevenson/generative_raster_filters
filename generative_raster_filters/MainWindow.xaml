@@ -23,7 +23,7 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="FileSelect" Content="Select Input File" Click="FileSelect_Click"  Width="100" Height="30" Grid.Column="0" Margin="6,6,3,3"/>
-            <Button x:Name="DirectorySelect" Content="Select Output Directory" Click="DirectorySelect_Click"  Width="150" Height="30" Grid.Column="1" Margin="3,6,6,3"
+            <Button x:Name="DirectorySelect" Content="Select Output Directory" Click="DirectorySelect_Click"  Width="150" Height="30" Grid.Column="1" Margin="3,6,6,3"/>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
